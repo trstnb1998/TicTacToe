@@ -1,20 +1,27 @@
+//make a variable for user's first choice
 let choice = 'X'
+
+//make function that has an (event) parameter 
 const addX = function(event) {
-    const tileElement = event.target;
-    $(tileElement).text(choice);
-    $(tileElement).text(currentTileText);
-    if (choice === 'X') {
-        choice = 'O'
-    } else if (choice === 'O') {
-        choice = 'X'
-    } 
+    const tileElement = event.target;//getting the element the event targeted
+    let tileText = $(tileElement).text();//getting the tileElement and getting the text and assigning it to tileText(in a new variable)
+    
+    //if titleText is undefined then perform below
+    if ((tileText === undefined)) {
+        $(tileElement).text(choice);//sets the text of tileElement to be (choice)
+        if (choice === 'X') {
+            choice = 'O'
+        } else if (choice === 'O') {
+            choice = 'X'
+        } 
+    }
 }
 
-
+//when .tile is clicked it will call addX function
 const init = function() {
     $('.tile').on('click', addX);
 }
-
+//when doc is ready run (init)
 $(document).ready(init)
 // Overview
 // Let's start out with something fun - a game!
