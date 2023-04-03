@@ -1,0 +1,22 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.tile {
+    border: 2px solid black;
+}
