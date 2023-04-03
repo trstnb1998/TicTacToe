@@ -1,5 +1,5 @@
 body {
-    background-color: aqua;
+    background-color: #547373;
 }
 
 h1 {
@@ -14,9 +14,38 @@ h1 {
     margin: 0 auto;
     width: 300px;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid transparent;
+    justify-content: center;
 }
 
 .tile {
+    transition: 0.34s;
+    -webkit-user-select: none; /* Safari */ 
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */ 
+    user-select: none; /* Standard */
+}
+
+.noBorder {
+    border: none;
+}
+
+.leftRightBorder {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.topBottomBorder {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.centerBorder {
     border: 2px solid black;
+}
+
+.tile:hover {
+    background-color: #547373;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

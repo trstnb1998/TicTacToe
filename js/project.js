@@ -1,3 +1,21 @@
+let choice = 'X'
+const addX = function(event) {
+    const tileElement = event.target;
+    $(tileElement).text(choice);
+    $(tileElement).text(currentTileText);
+    if (choice === 'X') {
+        choice = 'O'
+    } else if (choice === 'O') {
+        choice = 'X'
+    } 
+}
+
+
+const init = function() {
+    $('.tile').on('click', addX);
+}
+
+$(document).ready(init)
 // Overview
 // Let's start out with something fun - a game!
 
