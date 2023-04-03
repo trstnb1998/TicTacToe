@@ -7,7 +7,7 @@ const addX = function(event) {
     let tileText = $(tileElement).text();//getting the tileElement and getting the text and assigning it to tileText(in a new variable)
     
     //if titleText is undefined then perform below
-    if ((tileText === undefined)) {
+    if (!(tileText)) {
         $(tileElement).text(choice);//sets the text of tileElement to be (choice)
         if (choice === 'X') {
             choice = 'O'
