@@ -1,6 +1,7 @@
 //make a variable for user's first choice
 let choice = 'X'
 
+
 //make function that has an (event) parameter 
 const addX = function(event) {
     const tileElement = event.target;//getting the element the event targeted

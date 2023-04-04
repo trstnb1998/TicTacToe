@@ -1,20 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
 body {
-    background-color: #547373;
+    background-color: black;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 3em;
+    color: rgb(255, 0, 200);
 }
 
 #board {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows: 120px 120px 120px;
     margin: 0 auto;
-    width: 300px;
+    width: 350px;
     text-align: center;
     border: 2px solid transparent;
+    font-size: 4em;
+    font-family: 'Delicious Handrawn', cursive;
+    color: rgb(255, 0, 200);
 }
 
 .tile {
@@ -23,6 +32,9 @@ h1 {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */ 
     user-select: none; /* Standard */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .noBorder {
@@ -30,21 +42,22 @@ h1 {
 }
 
 .leftRightBorder {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 3px solid aqua;
+    border-right: 3px solid aqua;
 }
 
 .topBottomBorder {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 3px solid aqua;
+    border-bottom: 3px solid aqua;
 }
 
 .centerBorder {
-    border: 2px solid black;
+    border: 3px solid aqua;
 }
 
 .tile:hover {
-    background-color: #547373;
+    background-color: #000000;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgb(255, 113, 253) 0px 5px 15px;
+    border-radius: 25px;
 }
