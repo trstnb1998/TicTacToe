@@ -31,6 +31,7 @@ const checkWinner = function() {
     ) {
         $('.result').show();
         $('#winningMessage').text('PLAYER 1 WINS!');
+        return;
     } else if (
         $('#1').text() == 'O' && $('#2').text() == 'O' && $('#3').text() == 'O' ||
         $('#4').text() == 'O' && $('#5').text() == 'O' && $('#6').text() == 'O' ||
@@ -38,6 +39,7 @@ const checkWinner = function() {
     ) {
         $('.result').show();
         $('#winningMessage').text('PLAYER 2 WINS!');
+        return;
     }
 
     //check vertical X
