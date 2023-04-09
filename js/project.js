@@ -1,17 +1,19 @@
 //make a variable for user's first choice
 let choice = 'X';
-let choice2 = 'O';
-let endGame = true;
-let gameMessage = '';
 
 //make function that has an (event) parameter 
 const addX = function(event) {
-    const tileElement = event.target;//getting the element the event targeted
-    let tileText = $(tileElement).text();//getting the tileElement and getting the text and assigning it to tileText(in a new variable)
+    const tileElement = event.currentTarget;//getting the element the event targeted
+    // let tileText = $(tileElement).text();//getting the tileElement and getting the text and assigning it to tileText(in a new variable)
+    let playerChoice = $(tileElement).find('.playerChoice')
+
 
     //allows for players to take turns
-    if (!(tileText)) {
-        $(tileElement).text(choice);//sets the text of tileElement to be (choice)
+    if (!playerChoice.length) {
+        // $(tileElement).text(choice);//sets the text of tileElement to be (choice)
+        $(tileElement).text('');
+        $(tileElement).append(`<span class="playerChoice">${choice}</span>`);
+
         if (choice === 'X') {
             choice = 'O';
         } else if (choice === 'O') {
@@ -85,13 +87,32 @@ const checkWinner = function() {
     }
 }
 
+const showPreview = function(event) {
+    const tileElement = event.currentTarget;
+    let playerChoice = $(tileElement).text();
+
+    if (!(playerChoice)) {
+        $(tileElement).append(`<span class="previewChoice">${choice}</span>`);
+    }
+}
+
+const removePreview = function(event) {
+    const tileElement = event.currentTarget;
+    let previewElement = $('.previewChoice')
+    previewElement.remove();
+    
+}
+
 const hideResult = function() {
     $('.result').hide()
     $('.tile').text('')
+    choice = 'X';
 }
 //when .tile is clicked it will call addX function
 const init = function() {
     $('.tile').on('click', addX);
+    $('.tile').on('mouseenter', showPreview);
+    $('.tile').on('mouseleave', removePreview);
     $('#resetButton').on('click', hideResult);
 }
 //when doc is ready run (init)
