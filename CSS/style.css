@@ -83,6 +83,8 @@ h1 {
     color: white;
     font-size: 5em;
     flex-direction: column;
+    text-align: center;
+    padding-top: 3em;
 }
 
 .result button {

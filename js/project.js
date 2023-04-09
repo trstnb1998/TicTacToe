@@ -87,6 +87,7 @@ const checkWinner = function() {
 
 const hideResult = function() {
     $('.result').hide()
+    $('.tile').text('')
 }
 //when .tile is clicked it will call addX function
 const init = function() {
