@@ -32,7 +32,7 @@ const checkWinner = function() {
         $('#7').text() == 'X' && $('#8').text() == 'X' && $('#9').text() == 'X'
     ) {
         $('.result').show();
-        $('#winningMessage').text('PLAYER 1 WINS!');
+        $('#winningMessage').text('PLAYER X WINS!');
         return;
     } else if (
         $('#1').text() == 'O' && $('#2').text() == 'O' && $('#3').text() == 'O' ||
@@ -40,7 +40,7 @@ const checkWinner = function() {
         $('#7').text() == 'O' && $('#8').text() == 'O' && $('#9').text() == 'O'
     ) {
         $('.result').show();
-        $('#winningMessage').text('PLAYER 2 WINS!');
+        $('#winningMessage').text('PLAYER O WINS!');
         return;
     }
 
@@ -51,7 +51,7 @@ const checkWinner = function() {
         $('#3').text() == 'X' && $('#6').text() == 'X' && $('#9').text() == 'X'
     ) {
         $('.result').show()
-        $('#winningMessage').text('PLAYER 1 WINS!');
+        $('#winningMessage').text('PLAYER X WINS!');
         return;
     } else if (
         $('#1').text() == 'O' && $('#4').text() == 'O' && $('#7').text() == 'O' ||
@@ -59,7 +59,7 @@ const checkWinner = function() {
         $('#3').text() == 'O' && $('#6').text() == 'O' && $('#9').text() == 'O'
     ) {
         $('.result').show()
-        $('#winningMessage').text('PLAYER 2 WINS!');
+        $('#winningMessage').text('PLAYER O WINS!');
         return;
     } 
 
@@ -68,14 +68,14 @@ const checkWinner = function() {
         $('#3').text() == 'X' && $('#5').text() == 'X' && $('#7').text() == 'X'
     ) {
         $('.result').show()
-        $('#winningMessage').text('PLAYER 1 WINS!');
+        $('#winningMessage').text('PLAYER X WINS!');
         return;
     } else if (
         $('#1').text() == 'O' && $('#5').text() == 'O' && $('#9').text() == 'O' || 
         $('#3').text() == 'O' && $('#5').text() == 'O' && $('#7').text() == 'O'
     ) {
         $('.result').show()
-        $('#winningMessage').text('PLAYER 2 WINS!');
+        $('#winningMessage').text('PLAYER O WINS!');
         return;
     }
 
