@@ -10,4 +10,4 @@
 
 ### Enjoy and Have fun!!
 
-Play [Tic Tac Toe](https://trstnb1998.github.io/Project0/).
+Play [Tic Tac Toe](https://trstnb1998.github.io/TicTacToe/).
